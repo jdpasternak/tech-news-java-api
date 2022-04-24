@@ -7,6 +7,6 @@ import org.springframework.data.repository.query.Param;
 
 
 public interface VoteRepository extends JpaRepository<Vote, Integer> {
-    @Query("SELECT count(*) FROM vote WHERE v.postId = :id")
+    @Query("SELECT count(*) FROM Vote v WHERE v.postId = :id")
     int countVotesByPostId(@Param("id") Integer id);
 }
